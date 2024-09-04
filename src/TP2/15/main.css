@@ -1,0 +1,300 @@
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 0;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+nav.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list li {
+  margin-right: 20px;
+}
+
+.menu-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-list li:last-child {
+  margin-right: 0;
+}
+
+.main {
+  padding: 20px;
+}
+
+.product-detail {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+}
+
+.image-gallery {
+  flex: 1;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.thumbnail.selected {
+  border-color: #007bff;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.product-info p {
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.related-products {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.related-products h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.related-product {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  width: calc(33.333% - 20px);
+}
+
+.related-product img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.comments {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.comments h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comment {
+  background: white;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment p {
+  margin: 0;
+}
+
+.comment strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  header, footer {
+    background-color: #1e1e1e;
+  }
+
+  .product-detail, .related-products, .comments {
+    background-color: #1e1e1e;
+
+  }
+
+  .thumbnail.selected {
+    border-color: #e0e0e0;
+  }
+
+  .price {
+    color: #e0e0e0;
+  }
+
+  .related-product {
+    background: #2c2c2c;
+  }
+
+  .comment {
+    background: #2c2c2c;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+  .menu-toggle{
+    display: block;
+  }
+
+  .menu-list {
+    display: none;
+  }
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .related-product {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+
+  .menu-toggle{
+    display: block;
+  }
+
+  .menu-list {
+    display: none;
+  }
+  .menu-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-list.closed {
+    display: none;
+  }
+
+  .menu-list.open {
+    display: flex;
+  }
+
+  .product-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thumbnail {
+    width: 75px;
+    height: 75px;
+  }
+
+  .related-product {
+    width: 100%;
+  }
+
+  .comments {
+    padding: 10px;
+  }
+}

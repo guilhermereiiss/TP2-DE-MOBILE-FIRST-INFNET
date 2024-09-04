@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: rgb(66, 187, 218);
+  padding: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+  color: white;
+  width: 100%;
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+  display: none;
+}
+
+.mini-info {
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.mini-info-text h3 {
+  font-size: 14px;
+}
+
+.sobre-geral {
+  margin-left: 10px;
+  margin-top: 12px;
+
+}
+
+.sobre-geral p {
+  margin-bottom: 12px;
+}
+
+.img-sobre img {
+  gap: 20px;
+}
+
+.img-sobre {
+  margin-bottom: 12px;
+}
+
+.amigos h4 {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.amigos-imgs {
+  margin-left: 10px;
+}
+
+.amigos-imgs img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.sugestao h4 {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.sugestao-imgs {
+  margin-left: 10px;
+}
+
+.sugestao-imgs img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.galeria {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+
+  .desk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .amigos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .sugestao {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-geral {
+    width: 600px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  header {
+    background-color: rgb(66, 187, 218);
+    color: white;
+  }
+
+  .nav-links a {
+    color: black;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+
+  header {
+    background-color: #1f1f1f;
+    color: white;
+  }
+
+  .nav-links a {
+    color: white;
+  }
+}
